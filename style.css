@@ -1,6 +1,14 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    background-color: whitesmoke;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,37 +16,131 @@ body {
     margin: 0;
 }
 
+.systum{
+    width: 299px;
+    height: 350px;
+    background-color: hsl(0, 0%, 96%, 70%);
+}
+
 .calculator {
-    width: 220px;
-    border: 1px solid #000;
-    background-color: #fff;
+    width: 299px;
+    height: 500px;
+    background-color: hsl(0, 0%, 96%, 60%);
+    border-radius: 10%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1px;
 }
 
 .display-box {
+    width: 278px;
+    height: 150px;
     grid-column: 1 / 5;
     background-color: #f0f0f0;
     padding: 10px;
     text-align: right;
+    background-color: hsl(0, 0%, 96%, 0%);
+    animation: pointer 0.8s linear infinite normal;
+}
+
+@keyframes pointer{
+    from{color: #febd68;}
+    to{color: white;}
+}
+
+p{
+    font-size: 50px;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: 100px;
+    background-color: hsl(0, 0%, 96%, 70%);
 }
 
 .button-row {
     grid-column: 1 / 5;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    background-color: hsl(0, 0%, 96%, 60%);
+    border-radius: 20%;
 }
 
 .button {
-    width: 45px;
-    height: 45px;
-    border: 1px solid #000;
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
     background-color: #fff;
     font-size: 18px;
     cursor: pointer;
+    border-radius: 35%;
+    color: black ;
+    box-shadow: 5px 5px 5px #febd68;
+    transition: all 0.3s;
 }
 
 .button:hover {
     background-color: #ddd;
+    font-size: 2rem;
+}
+
+.button-row456 {
+    width: 227px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    background-color: hsl(0, 0%, 96%, 60%);
+}
+
+#add {
+    height: 90px;
+    position: relative;
+    bottom: 61px;
+    border-radius: 29%;
+    background-color: #febd68;
+    color: black;
+}
+
+#zero {
+    width: 134px;
+    border-radius: 27%;
+    position: relative;
+    bottom: 29px;
+}
+
+#decimal{
+   position: relative;
+   bottom: 29px;
+}
+
+#equals {
+    height: 90px;
+    position: relative;
+    bottom: 60px;
+    border-radius: 29%;
+    background-color: #febd68;
+    color: black;
+}
+
+#subtract{
+    background-color: #febd68;
+    color: black;
+}
+
+#multiply{
+    background-color: #febd68;
+    color: black;
+}
+
+#divide{
+    background-color: #febd68;
+    color: black;
+}
+
+#clear{
+    color: black;
+}
+
+#backspace{
+    color: black;
 }

@@ -1,23 +1,27 @@
 let string = "";
+let input = document.querySelector('input');
 let button = document.querySelectorAll('.button');
-Array.from(button).forEach((buttons)=>{
+let arr = Array.from(button)
+
+
+arr.forEach((buttons)=>{
   buttons.addEventListener('click', (e)=>{
     if(e.target.innerHTML == '='){
       string = eval(string);
-      document.querySelector('input').value = string;
+      input.value = string;
     }
-    else if(e.target.innerHTML == 'C'){
+    else if(e.target.innerHTML == 'AC'){
       string = ""
-      document.querySelector('input').value = string;
+      input.value = string;
     }
-    else if(e.target.innerHTML == '0'){
-        string = string - e.target.innerHTML;
-        document.querySelector('input').value = string;
+    else if(e.target.innerHTML == 'DL'){
+        string = string.substring(0, string.length-1);
+        input.value = string;
       }
     else{ 
-   // console.log(e.target)
+    // console.log(e.target)
     string = string + e.target.innerHTML;
-    document.querySelector('input').value = string;
+    input.value = string;
       }
   })
 })

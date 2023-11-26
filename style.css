@@ -40,21 +40,23 @@ body {
     padding: 10px;
     text-align: right;
     background-color: hsl(0, 0%, 96%, 0%);
-    animation: pointer 0.8s linear infinite normal;
+    /* animation: pointer 0.8s linear infinite normal; */
 }
 
-@keyframes pointer{
+/* @keyframes pointer{
     from{color: #febd68;}
     to{color: white;}
-}
+} */
 
-p{
+input{
+    width: 100%;
     font-size: 50px;
     display: flex;
     justify-content: end;
     position: relative;
-    top: 100px;
+    top: 90px;
     background-color: hsl(0, 0%, 96%, 80%);
+    border: 2px solid white;
 }
 
 .button-row {

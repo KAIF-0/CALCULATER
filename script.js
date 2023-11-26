@@ -15,13 +15,13 @@ arr.forEach((buttons)=>{
       input.value = string;
     }
     else if(e.target.innerHTML == 'DL'){
-        string = string.substring(0, string.length-1);
-        input.value = string;
-      }
+      string = string.substring(0, string.length-1);
+      input.value = string;
+    }
     else{ 
-    // console.log(e.target)
-    string = string + e.target.innerHTML;
-    input.value = string;
-      }
+      // console.log(e.target)
+      string = string + e.target.innerHTML;
+      input.value = string;
+    }
   })
 })
